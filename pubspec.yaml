@@ -1,6 +1,6 @@
 name: flat_buffers_generator
 description: A build_runner builder for generating Dart code from FlatBuffers schema (.fbs) files using flatc.
-version: 1.0.0
+version: 1.0.1
 repository: https://github.com/poirierlouis/flat_buffers_generator
 
 environment:
