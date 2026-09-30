@@ -1,0 +1,19 @@
+builders:
+  flatc_builder:
+    import: 'package:flat_buffers_generator/flat_buffers_generator.dart'
+    builder_factories: ['flatcBuilder']
+    # Only used by build_runner to order builders. The actual mapping is
+    # computed from the `input_dir` / `output_dir` options by
+    # `FlatcBuilder.buildExtensions`.
+    build_extensions:
+      '^schemas/{{}}.fbs': ['lib/schemas/{{}}.g.dart']
+      # Placeholder, never written: checks that schemas are build sources.
+      '$package$': ['lib/schemas/.flat_buffers_generator']
+    auto_apply: dependents
+    build_to: source
+    defaults:
+      options:
+        input_dir: 'schemas'
+        output_dir: 'lib/schemas'
+        flatc_path: 'flatc'
+        extra_args: []

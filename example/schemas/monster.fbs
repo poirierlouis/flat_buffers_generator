@@ -1,0 +1,17 @@
+include "common/vec3.fbs";
+
+namespace MyGame.Sample;
+
+enum Color:byte { Red = 0, Green, Blue = 2 }
+
+table Monster {
+  pos:MyGame.Common.Vec3;
+  mana:short = 150;
+  hp:short = 100;
+  name:string;
+  friendly:bool = false;
+  inventory:[ubyte];
+  color:Color = Blue;
+}
+
+root_type Monster;

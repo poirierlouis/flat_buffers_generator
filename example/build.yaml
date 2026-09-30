@@ -1,0 +1,4 @@
+# `schemas/` is not one of build_runner's default source directories; add it
+# without replacing the defaults (lib/, test/, bin/, ...).
+additional_public_assets:
+  - "schemas/**"

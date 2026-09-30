@@ -1,0 +1,7 @@
+namespace MyGame.Common;
+
+struct Vec3 {
+  x:float;
+  y:float;
+  z:float;
+}
